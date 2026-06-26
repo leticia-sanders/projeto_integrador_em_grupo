@@ -1094,3 +1094,61 @@ iframe {
 .feedback-card{
     margin-bottom: 50px;
 }
+.video-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.video-card{
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
+}
+
+.video-card iframe{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    display: block;
+}
+
+.video-card div{
+    padding: 22px;
+}
+
+.video-card:last-child{
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 768px){
+    .video-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .video-card:last-child{
+        grid-column: auto;
+    }
+}
+#mensagem-final{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 30px;
+}
+
+#mensagem-final .intro-box{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.feedback-card{
+    margin-bottom: 35px;
+}
+
+.feedback-card:last-child{
+    margin-bottom: 0;
+}
