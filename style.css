@@ -1094,3 +1094,14 @@ iframe {
 .feedback-card{
     margin-bottom: 50px;
 }
+#mensagem-final{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px;
+}
+
+#mensagem-final .intro-box{
+    max-width: 900px;
+    margin: 0 auto;
+}
