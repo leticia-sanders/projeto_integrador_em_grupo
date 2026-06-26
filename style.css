@@ -1061,3 +1061,36 @@ iframe {
 
     overflow: hidden;
 }
+.tagline {
+    font-family: "Philosopher", serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.main-nav a {
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+}
+.feedback-text{
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #333;
+}
+
+.feedback-name{
+    display: block;
+    margin-top: 12px;
+
+    color: #2D6A4F; /* mesmo verde da aba */
+
+    font-style: italic; /* mesma fonte em itálico */
+    font-weight: 700;   /* apenas deixa em negrito */
+
+    font-family: inherit; /* usa exatamente a mesma fonte do comentário */
+
+    letter-spacing: .3px;
+}
+.feedback-card{
+    margin-bottom: 50px;
+}
