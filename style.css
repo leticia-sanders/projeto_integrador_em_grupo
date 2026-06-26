@@ -4,7 +4,7 @@
    Tema profissional em verde escuro
    ========================================================== */
   
-</head>
+
 * {
     margin: 0;
     padding: 0;
@@ -979,15 +979,6 @@ iframe {
         background-attachment: scroll;
     }
 }
-
-h1, h2, h3, h4, .tagline {
-    font-family: "Philosopher", "Georgia", serif;
-    font-weight: 700;
-}
-
-body {
-    font-family: "Mulish", "Arial", sans-serif;
-}
 .hero{
     background:
         linear-gradient(rgba(7, 28, 19, 0.70), rgba(7, 28, 19, 0.70)),
@@ -1161,4 +1152,185 @@ body {
 
 .feedback-card:last-child{
     margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   CORREÇÕES FINAIS DE LAYOUT
+   ========================================================== */
+
+/* Hero definitivo */
+.hero{
+    position: relative !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 120px 20px 60px !important;
+    background:
+        linear-gradient(rgba(5, 35, 22, .78), rgba(5, 35, 22, .78)),
+        url("mapa-de-mundo-feito-com-grama.avif") center / cover no-repeat !important;
+    background-attachment: fixed !important;
+    overflow: hidden !important;
+}
+
+.hero-content{
+    max-width: 950px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.hero-content iframe,
+.hero-content video,
+.hero-content img{
+    display: none !important;
+}
+
+/* Estrutura geral das seções */
+.main-content{
+    padding: 90px 20px 20px !important;
+}
+
+.section{
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto 100px !important;
+    padding: 0 20px !important;
+    scroll-margin-top: 92px !important;
+}
+
+.section-title{
+    max-width: 900px !important;
+    margin: 0 auto 18px !important;
+    text-align: center !important;
+}
+
+.section-subtitle{
+    max-width: 900px !important;
+    margin: 0 auto 48px !important;
+    text-align: center !important;
+}
+
+/* Caixas alinhadas */
+.intro-box,
+.sources,
+.quiz-box,
+.checklist-box,
+.calculator{
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Cards do diagnóstico */
+.grid-container{
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 28px !important;
+    align-items: stretch !important;
+}
+
+.glass-card{
+    width: 100% !important;
+    height: 315px !important;
+}
+
+.card-front,
+.card-back{
+    overflow: hidden !important;
+}
+
+/* Vídeos 5 organizados */
+.video-grid{
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 30px !important;
+    max-width: 1100px !important;
+    margin: 40px auto 0 !important;
+}
+
+.video-card{
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,.12) !important;
+}
+
+.video-card iframe{
+    width: 100% !important;
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
+    border: 0 !important;
+    display: block !important;
+}
+
+.video-card div{
+    padding: 22px !important;
+}
+
+.video-card:last-child{
+    grid-column: 1 / -1 !important;
+}
+
+/* Depoimentos alinhados com introdução */
+#mensagem-final{
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto 100px !important;
+    padding: 0 20px !important;
+}
+
+#mensagem-final .intro-box{
+    max-width: 900px !important;
+    margin: 0 auto !important;
+}
+
+.feedback-card{
+    margin-bottom: 35px !important;
+}
+
+.feedback-card:last-child{
+    margin-bottom: 0 !important;
+}
+
+/* Navbar sem quebrar */
+.navbar{
+    overflow: hidden !important;
+}
+
+.nav-links{
+    flex-wrap: nowrap !important;
+}
+
+.nav-links a{
+    white-space: nowrap !important;
+}
+
+/* Responsividade */
+@media (max-width: 900px){
+    .grid-container,
+    .video-grid{
+        grid-template-columns: 1fr !important;
+    }
+
+    .video-card:last-child{
+        grid-column: auto !important;
+    }
+
+    .hero{
+        background-attachment: scroll !important;
+    }
+}
+
+@media (max-width: 480px){
+    .section{
+        padding: 0 14px !important;
+        margin-bottom: 72px !important;
+    }
 }
