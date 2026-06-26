@@ -979,6 +979,15 @@ iframe {
         background-attachment: scroll;
     }
 }
+
+h1, h2, h3, h4, .tagline {
+    font-family: "Philosopher", "Georgia", serif;
+    font-weight: 700;
+}
+
+body {
+    font-family: "Mulish", "Arial", sans-serif;
+}
 .hero{
     background:
         linear-gradient(rgba(7, 28, 19, 0.70), rgba(7, 28, 19, 0.70)),
