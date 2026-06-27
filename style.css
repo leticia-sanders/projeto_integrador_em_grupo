@@ -1299,11 +1299,6 @@ iframe {
     margin-bottom: 0 !important;
 }
 
-/* Navbar sem quebrar */
-.navbar{
-    overflow: hidden !important;
-}
-
 .nav-links{
     flex-wrap: nowrap !important;
 }
@@ -1332,5 +1327,15 @@ iframe {
     .section{
         padding: 0 14px !important;
         margin-bottom: 72px !important;
+    }
+}
+.navbar {
+    overflow: visible !important;
+}
+
+@media (max-width: 820px) {
+    .nav-links.open {
+        display: flex !important;
+        z-index: 9999 !important;
     }
 }
